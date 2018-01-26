@@ -85,6 +85,11 @@
   typeset -U PATH
 # }}}
 
+# Sourcing {{{
+  # source $HOME/.asdf/asdf.sh
+  # source ~/.fzf.zsh
+# }}}
+
 # Colors {{{
   if [[ $TERM == xterm ]]
   then
@@ -112,7 +117,7 @@
   alias la="ls -al"
   alias lf="ls -al | grep ${1}"
   alias ls="ls -Gl"
-  alias tt="$EDITOR ~/.tmux.conf"
+  #alias tt="$EDITOR ~/.tmux.conf"
   alias u="utils"
   alias v="vim ."
   alias vcp="vim +PlugClean +qall"
@@ -124,7 +129,7 @@
 # }}}
 
 # Keybindings {{{
-  bindkey '^e' autosuggest-accept
+  bindkey '^l' autosuggest-accept
 
   # move cursor to end of line after history search completion
   autoload -U history-search-end
@@ -352,10 +357,10 @@ zz     [alias]              \$EDITOR ~/.zshrc"
 # }}}
 
 # Tmux {{{
-  if hash tmux &> /dev/null; then
-    case $- in *i*)
-      [ -z "$TMUX" ] && tmux new -A -s $(whoami)
-    esac
-  else
-  fi
+#  if hash tmux &> /dev/null; then
+#    case $- in *i*)
+#      [ -z "$TMUX" ] && tmux new -A -s $(whoami)
+#    esac
+#  else
+#  fi
 # }}}
